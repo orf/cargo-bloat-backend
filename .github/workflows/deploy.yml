@@ -19,7 +19,6 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SLS_DEBUG: "*"
 
 #env:
 #DATABASE_URL: ${{ secrets.DATABASE_URL }}
