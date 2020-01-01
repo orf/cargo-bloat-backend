@@ -15,10 +15,7 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm ci
-      - name: serverless deploy
-        uses: serverless/github-action@master
-        with:
-          args: deploy --conceal
+      - run: npm run serverless deploy --conceal
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
