@@ -4,5 +4,8 @@
     "serverless-offline": "^5.12.1",
     "serverless-rust": "^0.3.7"
   },
-  "name": "cargo-bloat-backend"
+  "name": "cargo-bloat-backend",
+  "scripts": {
+    "deploy": "serverless deploy --conceal"
+  }
 }
