@@ -10,7 +10,7 @@ jobs:
       - name: npm install
         uses: actions/npm@master
         with:
-          args: install
+          args: ci
       - name: serverless deploy
         uses: serverless/github-action@master
         with:
