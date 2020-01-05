@@ -22,10 +22,6 @@ fn handler(_: Request, _: Context) -> Result<impl IntoResponse, HandlerError> {
         .load::<Installation>(&connection)
         .expect("Error loading posts");
 
-    println!("Displaying {} posts", results.len());
-    for r in results {
-        println!("{} / {} / {}", r.id, r.installation_id, r.repo);
-    }
     Ok(json!({
         "message": "Go Serverless v1.0! Your function executed successfully!"
     }))
