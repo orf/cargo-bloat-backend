@@ -21,7 +21,7 @@ fn handler(_: Request, _: Context) -> Result<impl IntoResponse, HandlerError> {
     let results = installs
         .filter(installation_id.eq(1))
         .load::<Installation>(&connection)
-        .expect("Error loading posts");
+        .expect("Error loading results");
 
     Ok(json!({
         "message": "Go Serverless v1.0! Your function executed successfully!"
