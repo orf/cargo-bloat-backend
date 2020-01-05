@@ -42,10 +42,6 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm ci
-      - run: cargo install diesel_cli --no-default-features --features postgres
-      - run: diesel migration run
-        env:
-          DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
       - run: npm run deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
