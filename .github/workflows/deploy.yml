@@ -35,6 +35,7 @@ jobs:
         with:
           toolchain: stable
           override: true
+      - run: cargo test
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'

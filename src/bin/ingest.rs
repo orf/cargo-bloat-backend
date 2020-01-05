@@ -6,14 +6,11 @@ fn main() {
     lambda!(handler)
 }
 
-fn handler(
-    _: Request,
-    _: Context,
-) -> Result<impl IntoResponse, HandlerError> {
+fn handler(_: Request, _: Context) -> Result<impl IntoResponse, HandlerError> {
     // `serde_json::Values` impl `IntoResponse` by default
     // creating an application/json response
     Ok(json!({
-    "message": "Go Serverless v1.0! Your function executed successfully!"
+        "message": "Go Serverless v1.0! Your function executed successfully!"
     }))
 }
 
@@ -25,7 +22,7 @@ mod tests {
     fn handler_handles() {
         let request = Request::default();
         let expected = json!({
-        "message": "Go Serverless v1.0! Your function executed successfully!"
+            "message": "Go Serverless v1.0! Your function executed successfully!"
         })
         .into_response();
         let response = handler(request, Context::default())

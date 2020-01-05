@@ -1,2 +1,14 @@
-[workspace]
-members = ["hello", "world"]
+[package]
+name = "cargo-bloat-backend"
+version = "0.1.0"
+authors = ["Tom Forbes <tom@tomforb.es>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+diesel = { version = "1.0.0", features = ["postgres"] }
+lambda_runtime = "0.2.1"
+lambda_http = "0.1.1"
+serde_json = "1.0.44"
+dotenv = "0.15.0"
