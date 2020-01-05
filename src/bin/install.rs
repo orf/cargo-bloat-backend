@@ -8,6 +8,7 @@ use lambda_runtime::{error::HandlerError, Context};
 use serde_json::json;
 
 fn main() {
+    establish_connection();
     lambda!(handler)
 }
 
