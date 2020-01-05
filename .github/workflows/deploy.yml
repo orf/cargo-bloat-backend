@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: CI
 
 on: [push]
 
@@ -35,6 +35,8 @@ jobs:
         with:
           toolchain: stable
           override: true
+      - name: Install xmllint
+        run: sudo apt-get install libpq-dev
       - run: cargo test
       - uses: actions/setup-node@v1
         with:
