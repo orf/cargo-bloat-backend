@@ -36,7 +36,7 @@ jobs:
           toolchain: stable
           override: true
       - name: Install xmllint
-        run: sudo apt-get install libpq-dev
+        run: sudo apt-get update && sudo apt-get install libpq-dev -y
       - run: cargo test
       - uses: actions/setup-node@v1
         with:
