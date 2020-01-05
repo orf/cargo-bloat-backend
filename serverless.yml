@@ -6,9 +6,8 @@ provider:
   stage: dev
   region: us-east-1
 
-# you can define service wide environment variables here
-#  environment:
-#    variable1: value1
+  environment:
+    DATABASE_URL: ${env:DATABASE_URL}
 
 package:
   individually: true
