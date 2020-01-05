@@ -18,13 +18,13 @@ plugins:
 
 functions:
   install:
-    handler: install
+    handler: cargo-bloat-backend.install
     events:
       - http:
           path: /install
           method: get
   ingest:
-    handler: ingest
+    handler: cargo-bloat-backend.ingest
     events:
       - http:
           path: /ingest
