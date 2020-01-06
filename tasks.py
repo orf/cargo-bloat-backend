@@ -12,5 +12,5 @@ def deploy(c, env="prod"):
           "--s3-bucket=cargo-bloat-deploy "
           "--output-template-file=%s/packaged.yaml" % (temp_dir, temp_dir),
           pty=True, echo=True)
-    c.run("aws cloudformation deploy --template-file=%s/packaged.yml --stack-name=cargo-bloat-%s" % (temp_dir, env),
+    c.run("aws cloudformation deploy --template-file=%s/packaged.yaml --stack-name=cargo-bloat-%s" % (temp_dir, env),
           pty=True, echo=True)
