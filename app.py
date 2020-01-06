@@ -1,4 +1,9 @@
 from chalice import Chalice
+from aws_xray_sdk.core import xray_recorder
+from aws_xray_sdk.core import patch_all
+
+xray_recorder.configure()
+patch_all()
 
 app = Chalice(app_name='cargo-bloat-backend')
 

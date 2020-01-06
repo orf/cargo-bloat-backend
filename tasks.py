@@ -1,4 +1,4 @@
-from invoke import task, Context
+from invoke import task
 import tempfile
 
 
