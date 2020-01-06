@@ -16,11 +16,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Install
-        uses: abatilo/actions-poetry@v1.1.0
-        with:
-          poetry_version: 1.0.0
-          args: install
+      - uses: actions/setup-python@v1
+      - uses: dschep/install-poetry-action@v1.2
 
 #env:
 #DATABASE_URL: ${{ secrets.DATABASE_URL }}
