@@ -17,6 +17,8 @@ jobs:
             ${{ runner.os }}-pip-
 
       - uses: actions/setup-python@v1
+        with:
+          python-version: '3.7.x'
       - uses: dschep/install-poetry-action@v1.2
       - run: poetry install
       - run: poetry run invoke deploy
