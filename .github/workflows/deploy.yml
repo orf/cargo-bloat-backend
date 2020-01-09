@@ -21,8 +21,4 @@ jobs:
           python-version: '3.7.x'
       - uses: dschep/install-poetry-action@v1.2
       - run: poetry install
-      - run: poetry run invoke deploy
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: us-east-1
+#      - run: poetry run invoke deploy

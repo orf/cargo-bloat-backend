@@ -132,6 +132,4 @@ dmypy.json
 .pyre/
 
 .venv/
-.chalice/deployed
-.chalice/deployments
 requirements.txt
