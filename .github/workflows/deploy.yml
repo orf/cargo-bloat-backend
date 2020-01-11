@@ -5,6 +5,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CLOUDSDK_CORE_PROJECT: ${{ secrets.GCP_PROJECT }}
     steps:
       - uses: actions/checkout@v1
 
