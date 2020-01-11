@@ -21,4 +21,9 @@ jobs:
           python-version: '3.7.x'
       - uses: dschep/install-poetry-action@v1.2
       - run: poetry install
-#      - run: poetry run invoke deploy
+      - run: poetry run pytest
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: '275.0.0'
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+      - run: poetry run invoke deploy
