@@ -1,4 +1,7 @@
-def webhook(request):
+from flask import Request
+
+
+def webhook(request: Request):
     """HTTP Cloud Function.
     Args:
         request (flask.Request): The request object.
@@ -9,3 +12,7 @@ def webhook(request):
         <http://flask.pocoo.org/docs/1.0/api/#flask.Flask.make_response>.
     """
     return 'Hello World!'
+
+
+def fetch(request: Request):
+    pass
