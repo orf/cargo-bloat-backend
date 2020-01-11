@@ -28,5 +28,4 @@ jobs:
         with:
           version: '275.0.0'
           service_account_key: ${{ secrets.GCP_SA_KEY }}
-          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
       - run: poetry run invoke deploy
