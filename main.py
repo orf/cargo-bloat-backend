@@ -15,4 +15,4 @@ def webhook(request: Request):
 
 
 def fetch(request: Request):
-    pass
+    return 'Hello World!'
