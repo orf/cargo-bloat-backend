@@ -9,7 +9,7 @@ jobs:
       CLOUDSDK_CORE_PROJECT: cargo-bloat
     steps:
       - uses: actions/checkout@v1
-
+      - run: cat ${GITHUB_EVENT_PATH}
       # Cache setup:
       - uses: actions/cache@v1
         with:
