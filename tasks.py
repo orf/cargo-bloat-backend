@@ -3,15 +3,11 @@ from invoke import task
 
 @task
 def deploy(c):
-    c.run(
+    commands = (
         "poetry export -f requirements.txt -o requirements.txt --without-hashes",
-        echo=True,
-    )
-    c.run(
         "gcloud --quiet functions deploy webhook --runtime python37 --trigger-http",
-        echo=True,
-    )
-    c.run(
         "gcloud --quiet functions deploy fetch --runtime python37 --trigger-http",
-        echo=True,
+        "gcloud --quiet functions deploy ingest --runtime python37 --trigger-http",
     )
+    for cmd in commands:
+        c.run(cmd, echo=True)
