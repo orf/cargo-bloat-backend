@@ -24,8 +24,8 @@ def ingest(request: Request):
         "text_size": data["text_size"],
         "toolchain": data["toolchain"],
         "rustc": data["rustc"],
-        "bloat": json.dumps(data["bloat"]),
-        "crates": crates,
+        "bloat": data["bloat"],
+        "crates": json.dumps(crates),
     }
     entity = Entity(repo_key, exclude_from_indexes=tuple(data.keys()))
     entity.update(data)
