@@ -10,7 +10,7 @@ def fetch(request: Request):
     repo_key = client.key("Bloat", repo)
     entity = client.get(repo_key)
     entity['crates'] = json.loads(entity['crates'])
-    return jsonify(result=entity)
+    return jsonify(entity)
 
 
 def ingest(request: Request):
