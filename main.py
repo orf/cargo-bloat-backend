@@ -1,4 +1,3 @@
-import itertools
 import json
 from flask import Request, jsonify
 from google.cloud.datastore import Client, Entity
@@ -14,9 +13,9 @@ def fetch(request: Request):
 
 
 def ingest(request: Request):
-    data = request.get_json()
-    repo = data["repo"]
+    repo = request.args["repo"]
     repo_key = client.key("Bloat", repo)
+    data = request.get_json()
     data = {
         "commit": data["commit"],
         "file-size": data["file-size"],
