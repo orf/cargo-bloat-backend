@@ -17,15 +17,14 @@ def ingest(request: Request):
     data = request.get_json()
     repo = data["repo"]
     repo_key = client.key("Bloat", repo)
-    crates = [[c["name"], c["size"]] for c in data["crates"]]
     data = {
         "commit": data["commit"],
-        "file_size": data["file_size"],
-        "text_size": data["text_size"],
+        "file-size": data["file-size"],
+        "text-size": data["text-size"],
         "toolchain": data["toolchain"],
         "rustc": data["rustc"],
         "bloat": data["bloat"],
-        "crates": json.dumps(crates),
+        "crates": json.dumps(data['crates']),
     }
     entity = Entity(repo_key, exclude_from_indexes=tuple(data.keys()))
     entity.update(data)
