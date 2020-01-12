@@ -15,7 +15,7 @@ def ingest(request: Request):
     data = request.get_json()
     repo = data["repo"]
     repo_key = client.key("Bloat", repo)
-    crates = [(c["name"], c["size"]) for c in data["crates"]]
+    crates = [[c["name"], c["size"]] for c in data["crates"]]
     data = {
         "commit": data["commit"],
         "file_size": data["file_size"],
