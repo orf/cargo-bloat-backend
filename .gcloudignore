@@ -14,8 +14,8 @@
 .gitignore
 
 node_modules
-#!include:.gitignore
 .venv/
 .github/
 .idea/
 .pytest_cache
+__pycache__
