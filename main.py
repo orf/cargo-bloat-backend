@@ -26,5 +26,6 @@ def ingest(request: Request):
         "crates": crates,
     }
     entity = Entity(repo_key, exclude_from_indexes=tuple(data.keys()))
+    entity.update(data)
     client.put(entity)
     return jsonify(ok=True)
