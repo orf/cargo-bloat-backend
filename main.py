@@ -9,6 +9,7 @@ def fetch(request: Request):
     repo = request.args["repo"]
     repo_key = client.key("Bloat", repo)
     entity = client.get(repo_key)
+    entity['crates'] = json.loads(entity['crates'])
     return jsonify(result=entity)
 
 
