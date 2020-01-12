@@ -1,7 +1,7 @@
 from flask import Request, jsonify
-from google.cloud import datastore
+from google.cloud.datastore import Client, Entity
 
-client = datastore.Client()
+client = Client()
 
 
 def handle_installation(data: dict):
@@ -13,7 +13,7 @@ def handle_installation(data: dict):
         return jsonify(status="deleted install")
     elif action == "created":
         repo_names = [r["full_name"] for r in data["repositories"]]
-        install_object = datastore.Entity(
+        install_object = Entity(
             key=install_key, exclude_from_indexes=("account",)
         )
         install_object["repos"] = repo_names
@@ -28,7 +28,7 @@ def handle_installation_repositories(data: dict):
     install_key = client.key("Installation", install_id)
     added = {r["full_name"] for r in data["repositories_added"]}
     removed = {r["full_name"] for r in data["repositories_removed"]}
-    install_object = datastore.Entity(key=install_key)
+    install_object = Entity(key=install_key)
     install_object["repos"] = list((set(install_object["repos"]) | added) - removed)
     client.put(install_object)
     return jsonify(status="updated install")
