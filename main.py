@@ -20,7 +20,7 @@ def ingest(request: Request):
     data = {
         "commit": data["commit"],
         "file-size": data["file-size"],
-        "text-size": data["text-size"],
+        "text-section-size": data["text-section-size"],
         "toolchain": data["toolchain"],
         "rustc": data["rustc"],
         "bloat": data["bloat"],
