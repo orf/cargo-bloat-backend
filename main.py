@@ -5,8 +5,8 @@ client = Client()
 
 
 def fetch(request: Request):
-    return "Hello World!"
+    return jsonify(ok=True)
 
 
 def ingest(request: Request):
-    return "Hello World!"
+    return jsonify(ok=True)
