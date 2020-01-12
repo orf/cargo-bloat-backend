@@ -28,7 +28,7 @@ def handle_installation_repositories(data: dict):
     install_key = client.key("Installation", install_id)
     added = {r["full_name"] for r in data["repositories_added"]}
     removed = {r["full_name"] for r in data["repositories_removed"]}
-    install_object = Entity(key=install_key)
+    install_object =client.get(install_key)
     install_object["repos"] = list((set(install_object["repos"]) | added) - removed)
     client.put(install_object)
     return jsonify(status="updated install")
