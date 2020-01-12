@@ -18,8 +18,8 @@ def ingest(request: Request):
     data = request.get_json()
     data = {
         "commit": data["commit"],
-        "file-size": data["file-size"],
-        "text-section-size": data["text-section-size"],
+        "file_size": data["file_size"],
+        "text_section_size": data["text_section_size"],
         "toolchain": data["toolchain"],
         "rustc": data["rustc"],
         "bloat": data["bloat"],
