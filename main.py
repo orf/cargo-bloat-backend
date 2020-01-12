@@ -1,5 +1,5 @@
 import itertools
-
+import json
 from flask import Request, jsonify
 from google.cloud.datastore import Client, Entity
 
@@ -24,7 +24,7 @@ def ingest(request: Request):
         "text_size": data["text_size"],
         "toolchain": data["toolchain"],
         "rustc": data["rustc"],
-        "bloat": data["bloat"],
+        "bloat": json.dumps(data["bloat"]),
         "crates": crates,
     }
     entity = Entity(repo_key, exclude_from_indexes=tuple(data.keys()))
