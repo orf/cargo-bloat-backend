@@ -7,7 +7,9 @@ client = Client()
 
 def fetch(request: Request):
     repo = request.args["repo"]
-    repo_key = client.key("Bloat", repo)
+    toolchain = request.args["toolchain"]
+
+    repo_key = client.key("Bloat", f'{repo}:{toolchain}')
     entity = client.get(repo_key)
     entity['crates'] = json.loads(entity['crates'])
     return jsonify(entity)
@@ -15,13 +17,14 @@ def fetch(request: Request):
 
 def ingest(request: Request):
     repo = request.args["repo"]
-    repo_key = client.key("Bloat", repo)
     data = request.get_json()
+    toolchain = data["toolchain"],
+    repo_key = client.key("Bloat", f'{repo}:{toolchain}')
+
     data = {
         "commit": data["commit"],
         "file_size": data["file_size"],
         "text_section_size": data["text_section_size"],
-        "toolchain": data["toolchain"],
         "rustc": data["rustc"],
         "bloat": data["bloat"],
         "crates": json.dumps(data['crates']),
