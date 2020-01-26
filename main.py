@@ -11,6 +11,9 @@ def fetch(request: Request):
 
     repo_key = client.key("Bloat", f'{repo}:{toolchain}')
     entity = client.get(repo_key)
+    if entity is None:
+        return jsonify({})
+
     entity['crates'] = json.loads(entity['crates'])
     return jsonify(entity)
 
