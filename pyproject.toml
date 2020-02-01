@@ -12,6 +12,7 @@ packages = [
 python = "^3.7"
 google-cloud-datastore = "^1.10.0"
 simplejson = "^3.17.0"
+google-cloud-logging = "^1.14.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.3.2"
