@@ -1,12 +1,9 @@
 import json
 from flask import Request, jsonify
 from google.cloud.datastore import Client, Entity
-import google.cloud.logging
 import logging
 
 client = Client()
-logging_client = google.cloud.logging.Client()
-logging_client.setup_logging()
 
 
 def fetch(request: Request):
