@@ -181,14 +181,14 @@ description = "Stackdriver Logging API client library"
 name = "google-cloud-logging"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "1.14.0"
+version = "1.15.0"
 
 [package.dependencies]
-google-cloud-core = ">=1.0.3,<2.0dev"
+google-cloud-core = ">=1.1.0,<2.0dev"
 
 [package.dependencies.google-api-core]
 extras = ["grpc"]
-version = ">=1.14.0,<2.0.0dev"
+version = ">=1.15.0,<2.0.0dev"
 
 [[package]]
 category = "main"
@@ -508,7 +508,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools"]
 
 [metadata]
-content-hash = "a433511fa8368db2debb6e0a9660ce81fc057286be3cc5a9869f35a24d33bba8"
+content-hash = "be5bd5447ada46463cda13ef7df7d8e7ddc55f3b5f08d091c33a531eb847cb29"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -569,8 +569,8 @@ google-cloud-datastore = [
     {file = "google_cloud_datastore-1.10.0-py2.py3-none-any.whl", hash = "sha256:8339cffa6b9058e8aed2f977c0b714ef69fc6f52a9172e3813c3cfcaa6195a28"},
 ]
 google-cloud-logging = [
-    {file = "google-cloud-logging-1.14.0.tar.gz", hash = "sha256:3c12d4421df8e4e77b5e029b1341ae80d180cfda0f9cbef417f36438630cc35f"},
-    {file = "google_cloud_logging-1.14.0-py2.py3-none-any.whl", hash = "sha256:d094abf3a98462235d16f171691a9325155ae9357f683b5367dfce663162a1f6"},
+    {file = "google-cloud-logging-1.15.0.tar.gz", hash = "sha256:5f7142a28f017ace6b6031e99c26ae1510d55330c9560bd81e308ebfdadfb76a"},
+    {file = "google_cloud_logging-1.15.0-py2.py3-none-any.whl", hash = "sha256:d46f5f5c1d40f35fe42818962471f8d1735810e8e1fa5ee741355718bfdcab1d"},
 ]
 googleapis-common-protos = [
     {file = "googleapis-common-protos-1.51.0.tar.gz", hash = "sha256:013c91704279119150e44ef770086fdbba158c1f978a6402167d47d5409e226e"},
@@ -624,6 +624,11 @@ markupsafe = [
     {file = "MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:ba59edeaa2fc6114428f1637ffff42da1e311e29382d81b339c1817d37ec93c6"},
     {file = "MarkupSafe-1.1.1-cp37-cp37m-win32.whl", hash = "sha256:b00c1de48212e4cc9603895652c5c410df699856a2853135b3967591e4beebc2"},
     {file = "MarkupSafe-1.1.1-cp37-cp37m-win_amd64.whl", hash = "sha256:9bf40443012702a1d2070043cb6291650a0841ece432556f784f004937f0f32c"},
+    {file = "MarkupSafe-1.1.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:6788b695d50a51edb699cb55e35487e430fa21f1ed838122d722e0ff0ac5ba15"},
+    {file = "MarkupSafe-1.1.1-cp38-cp38-manylinux1_i686.whl", hash = "sha256:cdb132fc825c38e1aeec2c8aa9338310d29d337bebbd7baa06889d09a60a1fa2"},
+    {file = "MarkupSafe-1.1.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:13d3144e1e340870b25e7b10b98d779608c02016d5184cfb9927a9f10c689f42"},
+    {file = "MarkupSafe-1.1.1-cp38-cp38-win32.whl", hash = "sha256:596510de112c685489095da617b5bcbbac7dd6384aeebeda4df6025d0256a81b"},
+    {file = "MarkupSafe-1.1.1-cp38-cp38-win_amd64.whl", hash = "sha256:e8313f01ba26fbbe36c7be1966a7b7424942f670f38e666995b88d012765b9be"},
     {file = "MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b"},
 ]
 more-itertools = [
