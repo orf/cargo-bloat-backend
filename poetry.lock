@@ -166,7 +166,7 @@ description = "Google Cloud Datastore API client library"
 name = "google-cloud-datastore"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "1.10.0"
+version = "1.11.0"
 
 [package.dependencies]
 google-cloud-core = ">=1.0.3,<2.0dev"
@@ -508,7 +508,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools"]
 
 [metadata]
-content-hash = "be5bd5447ada46463cda13ef7df7d8e7ddc55f3b5f08d091c33a531eb847cb29"
+content-hash = "2683fe83a2b49ad54ff768b5d880593e67efe0c4c19e842841e45ff298b6f0a7"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -565,8 +565,8 @@ google-cloud-core = [
     {file = "google_cloud_core-1.3.0-py2.py3-none-any.whl", hash = "sha256:6ae5c62931e8345692241ac1939b85a10d6c38dc9e2854bdbacb7e5ac3033229"},
 ]
 google-cloud-datastore = [
-    {file = "google-cloud-datastore-1.10.0.tar.gz", hash = "sha256:cae213e3817f37fdc3ac27c3a162024de3319ad0faf87a536fce375c4a1c1dc9"},
-    {file = "google_cloud_datastore-1.10.0-py2.py3-none-any.whl", hash = "sha256:8339cffa6b9058e8aed2f977c0b714ef69fc6f52a9172e3813c3cfcaa6195a28"},
+    {file = "google-cloud-datastore-1.11.0.tar.gz", hash = "sha256:f214bbdbc1f258ea1c7ae596bfaab15657a4452020a5e2431dca2122e17411dc"},
+    {file = "google_cloud_datastore-1.11.0-py2.py3-none-any.whl", hash = "sha256:611727038dcda0bf8450e942c1a067423af0359366d1a2549eab5515d2734b01"},
 ]
 google-cloud-logging = [
     {file = "google-cloud-logging-1.15.0.tar.gz", hash = "sha256:5f7142a28f017ace6b6031e99c26ae1510d55330c9560bd81e308ebfdadfb76a"},
