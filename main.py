@@ -5,10 +5,10 @@ import logging
 
 client = Client()
 
-accepted_data = {
+accepted_data = (
     'commit', 'file_size', 'text_section_size',
     'rustc', 'bloat', 'tree'
-}
+)
 
 
 def fetch(request: Request):
