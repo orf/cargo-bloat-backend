@@ -26,6 +26,6 @@ jobs:
       - run: poetry run pytest
       - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
-          version: '275.0.0'
+          version: '286.0.0'
           service_account_key: ${{ secrets.GCP_SA_KEY }}
       - run: poetry run invoke deploy
