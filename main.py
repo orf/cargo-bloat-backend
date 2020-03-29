@@ -6,8 +6,7 @@ import logging
 client = Client()
 
 accepted_data = (
-    'commit', 'file_size', 'text_section_size',
-    'rustc', 'bloat', 'tree'
+    'commit', 'rustc', 'bloat',
 )
 
 
@@ -22,7 +21,7 @@ def fetch(request: Request):
         logging.info('No entity found for key %s', repo_key)
         return jsonify({})
 
-    entity['crates'] = json.loads(entity['crates'])
+    entity['packages'] = json.loads(entity['packages'])
     logging.info('Returning entity with %s crates', len(entity['crates']))
     return jsonify(entity)
 
@@ -35,7 +34,7 @@ def ingest(request: Request):
     logging.info('Ingesting with key %s', repo_key)
 
     data = {
-        "crates": json.dumps(request_data['crates']),
+        "packages": json.dumps(request_data['packages']),
     }
     data.update({
         key: request_data[key]
