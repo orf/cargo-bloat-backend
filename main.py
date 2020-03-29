@@ -5,6 +5,11 @@ import logging
 
 client = Client()
 
+accepted_data = {
+    'commit', 'file_size', 'text_section_size',
+    'rustc', 'bloat', 'tree'
+}
+
 
 def fetch(request: Request):
     repo = request.args["repo"]
@@ -30,13 +35,13 @@ def ingest(request: Request):
     logging.info('Ingesting with key %s', repo_key)
 
     data = {
-        "commit": data["commit"],
-        "file_size": data["file_size"],
-        "text_section_size": data["text_section_size"],
-        "rustc": data["rustc"],
-        "bloat": data["bloat"],
         "crates": json.dumps(data['crates']),
     }
+    data.update({
+        key: data[key]
+        for key in accepted_data
+    })
+
     entity = Entity(repo_key, exclude_from_indexes=tuple(data.keys()))
     entity.update(data)
     client.put(entity)
