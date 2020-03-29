@@ -29,16 +29,16 @@ def fetch(request: Request):
 
 def ingest(request: Request):
     repo = request.args["repo"]
-    data = request.get_json()
-    toolchain = data["toolchain"]
+    request_data = request.get_json()
+    toolchain = request_data["toolchain"]
     repo_key = client.key("Bloat", f'{repo}:{toolchain}')
     logging.info('Ingesting with key %s', repo_key)
 
     data = {
-        "crates": json.dumps(data['crates']),
+        "crates": json.dumps(request_data['crates']),
     }
     data.update({
-        key: data[key]
+        key: request_data[key]
         for key in accepted_data
     })
 
