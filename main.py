@@ -22,7 +22,6 @@ def fetch(request: Request):
         return jsonify({})
 
     entity['packages'] = json.loads(entity['packages'])
-    logging.info('Returning entity with %s crates', len(entity['crates']))
     return jsonify(entity)
 
 
