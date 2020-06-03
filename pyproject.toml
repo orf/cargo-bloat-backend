@@ -15,7 +15,7 @@ simplejson = "^3.17.0"
 google-cloud-logging = "^1.15.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.4.2"
+pytest = "^5.4.3"
 flask = "^1.1.2"
 invoke = "^1.4.0"
 black = "^19.10b0"
