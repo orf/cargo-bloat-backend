@@ -181,7 +181,7 @@ description = "Stackdriver Logging API client library"
 name = "google-cloud-logging"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "1.15.0"
+version = "1.15.1"
 
 [package.dependencies]
 google-cloud-core = ">=1.1.0,<2.0dev"
@@ -509,7 +509,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools"]
 
 [metadata]
-content-hash = "491c98346dbed9256174f8ca1596563be5598a5b57fc92b853a6b25c8644f7ca"
+content-hash = "6bf6944226ad9b364a970caa2b67e5c9bf654623a22494767ccad07642071f6d"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -570,8 +570,8 @@ google-cloud-datastore = [
     {file = "google_cloud_datastore-1.11.0-py2.py3-none-any.whl", hash = "sha256:611727038dcda0bf8450e942c1a067423af0359366d1a2549eab5515d2734b01"},
 ]
 google-cloud-logging = [
-    {file = "google-cloud-logging-1.15.0.tar.gz", hash = "sha256:5f7142a28f017ace6b6031e99c26ae1510d55330c9560bd81e308ebfdadfb76a"},
-    {file = "google_cloud_logging-1.15.0-py2.py3-none-any.whl", hash = "sha256:d46f5f5c1d40f35fe42818962471f8d1735810e8e1fa5ee741355718bfdcab1d"},
+    {file = "google-cloud-logging-1.15.1.tar.gz", hash = "sha256:cb0d4af9d684eb8a416f14c39d9fa6314be3adf41db2dd8ee8e30db9e8853d90"},
+    {file = "google_cloud_logging-1.15.1-py2.py3-none-any.whl", hash = "sha256:20c7557fd170891eab1a5e428338ad646203ddc519bc2fc57fd59bef14cd3602"},
 ]
 googleapis-common-protos = [
     {file = "googleapis-common-protos-1.51.0.tar.gz", hash = "sha256:013c91704279119150e44ef770086fdbba158c1f978a6402167d47d5409e226e"},
