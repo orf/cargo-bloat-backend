@@ -16,7 +16,7 @@ google-cloud-logging = "^1.15.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.0.1"
-flask = "^1.1.2"
+flask = "^2.1.2"
 invoke = "^1.4.0"
 black = "^19.10b0"
 
